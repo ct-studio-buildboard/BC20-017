@@ -1,0 +1,49 @@
+company:
+  name: Spotify
+  logo: photos/spotify-logo.png
+product_narrative:
+  Team 222's Social Collaboration feature will both simply and diversify your listening
+  experience with friends and family by providing a collaborative environment based on
+  individual taste profiles of user-generated groups. One of the pain points we identified in our
+  user research was the difficulty of deciding what to play in a group setting or sharing music 
+  or podcast contents. This problem arises in the narratives of...
+    1. User finding it difficult to share, set up, and maintain playlists with friends
+    2. User experiencing friction in finding new contents on Spotify and only trusting friends
+        and family as a source of recommendation
+    3. User desiring an engaging tool to co-create playlists in events
+  Our solution will allow users to create custom groups of shared listeners and suggest
+  playlists of music and podcasts based on data analytics and algorithms, which is the key
+  strength of Spotify. By doing this, we aspire to deliver collaborative personalization
+  experience to users and create a sense of community and social listening experience.
+team:
+  picture: photos/team-photo.jpg
+  roster:
+  - name: Chan Baik
+    email: sb2435@cornell.edu
+    picture: photos/Chan.jpg
+    program: MBA
+  - name: Shuhan Zhang
+    email: sz478@cornell.edu
+    picture: photos/Shuhan.jpg
+    program: MBA
+  - name: Max Klein
+    email: kleim592@newschool.edu
+    picture: photos/Max.jpg
+    program: Design
+  - name: Rebecca Gill-Clarke
+    email: gillr456@newschool.edu
+    picture: photos/Rebecca.jpg
+    program: Design
+  - name: Jae Min Cha
+    email: jc988@cornell.edu
+    picture: photos/Jae.jpg
+    program: CS
+  - name: Bobo Liu
+    email: sl3284@cornell.edu
+    picture: photos/Bobo.jpg
+    program: CS
+assets:
+- title: Sprint 1
+  url: https://drive.google.com/file/d/1p4GWDCkJQWrVxZKMnYIEeu1E4l6z7LlK/view?usp=sharing
+- title: Crit 1
+  url: https://drive.google.com/file/d/1y0KWWnhIuYbW-dx0QERKpGuYi6Evhdqw/view?usp=sharing
