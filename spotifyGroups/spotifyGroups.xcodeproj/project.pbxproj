@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4168635D24242A1E00B3A321 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 4168635C24242A1E00B3A321 /* fonts */; };
+		41AF3C49242A926900DC4633 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C48242A926900DC4633 /* RoundButton.swift */; };
+		41AF3C4B242A96E700DC4633 /* LoginInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C4A242A96E700DC4633 /* LoginInputViewController.swift */; };
+		41AF3C4D242A9B8D00DC4633 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C4C242A9B8D00DC4633 /* HomeViewController.swift */; };
+		41AF3C51242AAECC00DC4633 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C50242AAECC00DC4633 /* ToolbarViewController.swift */; };
 		41BCB0D824240E19002BE02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB0D724240E19002BE02D /* AppDelegate.swift */; };
 		41BCB0DA24240E19002BE02D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB0D924240E19002BE02D /* SceneDelegate.swift */; };
 		41BCB0DC24240E19002BE02D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB0DB24240E19002BE02D /* ViewController.swift */; };
@@ -15,6 +20,9 @@
 		41BCB0E424240E1A002BE02D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BCB0E224240E1A002BE02D /* LaunchScreen.storyboard */; };
 		41BCB0EF24240E1A002BE02D /* spotifyGroupsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB0EE24240E1A002BE02D /* spotifyGroupsTests.swift */; };
 		41BCB0FA24240E1A002BE02D /* spotifyGroupsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB0F924240E1A002BE02D /* spotifyGroupsUITests.swift */; };
+		41BCB1082424108D002BE02D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB1072424108D002BE02D /* NavigationController.swift */; };
+		41BCB10C24242092002BE02D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB10B24242092002BE02D /* LoginViewController.swift */; };
+		41FA9DC5242ABEC400745CDA /* musicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9DC4242ABEC400745CDA /* musicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4168635C24242A1E00B3A321 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		41AF3C48242A926900DC4633 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		41AF3C4A242A96E700DC4633 /* LoginInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputViewController.swift; sourceTree = "<group>"; };
+		41AF3C4C242A9B8D00DC4633 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		41AF3C50242AAECC00DC4633 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		41BCB0D424240E19002BE02D /* spotifyGroups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotifyGroups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BCB0D724240E19002BE02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41BCB0D924240E19002BE02D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +62,9 @@
 		41BCB0F524240E1A002BE02D /* spotifyGroupsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotifyGroupsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BCB0F924240E1A002BE02D /* spotifyGroupsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotifyGroupsUITests.swift; sourceTree = "<group>"; };
 		41BCB0FB24240E1A002BE02D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41BCB1072424108D002BE02D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		41BCB10B24242092002BE02D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		41FA9DC4242ABEC400745CDA /* musicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +118,18 @@
 				41BCB0D724240E19002BE02D /* AppDelegate.swift */,
 				41BCB0D924240E19002BE02D /* SceneDelegate.swift */,
 				41BCB0DB24240E19002BE02D /* ViewController.swift */,
+				41BCB10B24242092002BE02D /* LoginViewController.swift */,
+				41AF3C4A242A96E700DC4633 /* LoginInputViewController.swift */,
+				41AF3C50242AAECC00DC4633 /* ToolbarViewController.swift */,
 				41BCB0DD24240E19002BE02D /* Main.storyboard */,
+				41FA9DC4242ABEC400745CDA /* musicViewController.swift */,
+				41AF3C4C242A9B8D00DC4633 /* HomeViewController.swift */,
+				41AF3C48242A926900DC4633 /* RoundButton.swift */,
+				41BCB1072424108D002BE02D /* NavigationController.swift */,
 				41BCB0E024240E1A002BE02D /* Assets.xcassets */,
 				41BCB0E224240E1A002BE02D /* LaunchScreen.storyboard */,
 				41BCB0E524240E1A002BE02D /* Info.plist */,
+				4168635C24242A1E00B3A321 /* fonts */,
 			);
 			path = spotifyGroups;
 			sourceTree = "<group>";
@@ -233,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41BCB0E424240E1A002BE02D /* LaunchScreen.storyboard in Resources */,
+				4168635D24242A1E00B3A321 /* fonts in Resources */,
 				41BCB0E124240E1A002BE02D /* Assets.xcassets in Resources */,
 				41BCB0DF24240E19002BE02D /* Main.storyboard in Resources */,
 			);
@@ -259,8 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41AF3C49242A926900DC4633 /* RoundButton.swift in Sources */,
 				41BCB0DC24240E19002BE02D /* ViewController.swift in Sources */,
+				41FA9DC5242ABEC400745CDA /* musicViewController.swift in Sources */,
+				41BCB1082424108D002BE02D /* NavigationController.swift in Sources */,
+				41AF3C4D242A9B8D00DC4633 /* HomeViewController.swift in Sources */,
 				41BCB0D824240E19002BE02D /* AppDelegate.swift in Sources */,
+				41BCB10C24242092002BE02D /* LoginViewController.swift in Sources */,
+				41AF3C4B242A96E700DC4633 /* LoginInputViewController.swift in Sources */,
+				41AF3C51242AAECC00DC4633 /* ToolbarViewController.swift in Sources */,
 				41BCB0DA24240E19002BE02D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
