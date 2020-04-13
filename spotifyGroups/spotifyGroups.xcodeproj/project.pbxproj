@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4168635D24242A1E00B3A321 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 4168635C24242A1E00B3A321 /* fonts */; };
+		417A3B28243A92B0000FFF45 /* music in Resources */ = {isa = PBXBuildFile; fileRef = 417A3B26243A929E000FFF45 /* music */; };
 		41AF3C49242A926900DC4633 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C48242A926900DC4633 /* RoundButton.swift */; };
 		41AF3C4B242A96E700DC4633 /* LoginInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C4A242A96E700DC4633 /* LoginInputViewController.swift */; };
 		41AF3C4D242A9B8D00DC4633 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C4C242A9B8D00DC4633 /* HomeViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		4168635C24242A1E00B3A321 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		417A3B26243A929E000FFF45 /* music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = music; sourceTree = "<group>"; };
 		41AF3C48242A926900DC4633 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		41AF3C4A242A96E700DC4633 /* LoginInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputViewController.swift; sourceTree = "<group>"; };
 		41AF3C4C242A9B8D00DC4633 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				41BCB0E024240E1A002BE02D /* Assets.xcassets */,
 				41BCB0E224240E1A002BE02D /* LaunchScreen.storyboard */,
 				41BCB0E524240E1A002BE02D /* Info.plist */,
+				417A3B26243A929E000FFF45 /* music */,
 				4168635C24242A1E00B3A321 /* fonts */,
 			);
 			path = spotifyGroups;
@@ -258,6 +261,7 @@
 			files = (
 				41BCB0E424240E1A002BE02D /* LaunchScreen.storyboard in Resources */,
 				4168635D24242A1E00B3A321 /* fonts in Resources */,
+				417A3B28243A92B0000FFF45 /* music in Resources */,
 				41BCB0E124240E1A002BE02D /* Assets.xcassets in Resources */,
 				41BCB0DF24240E19002BE02D /* Main.storyboard in Resources */,
 			);
