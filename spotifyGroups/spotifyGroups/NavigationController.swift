@@ -18,7 +18,7 @@ class NavigationController: UINavigationController {
         self.navigationBar.isHidden = true
         
         //Editing the toolbar
-        var items = [UIBarButtonItem]()
+        //var items = [UIBarButtonItem]()
 
         //Home
 //        let btn1 = UIButton(type: .custom)

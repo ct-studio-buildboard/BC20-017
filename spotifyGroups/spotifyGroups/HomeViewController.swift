@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
     @IBOutlet weak var main_scroll: UIScrollView!
     @IBOutlet weak var top_groups: UIScrollView!
     @IBOutlet weak var top_podcasts: UIScrollView!
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController {
         top_podcasts.showsHorizontalScrollIndicator = false
         top_groups.showsHorizontalScrollIndicator = false
         recently_played.showsHorizontalScrollIndicator = false
+        setNeedsStatusBarAppearanceUpdate()
     }
     
 

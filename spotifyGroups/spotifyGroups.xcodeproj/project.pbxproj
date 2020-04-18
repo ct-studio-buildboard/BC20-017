@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410A4F20244695C300952C6D /* playViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410A4F1F244695C300952C6D /* playViewController.swift */; };
+		410E2B80244505F50062437D /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B7F244505F50062437D /* LibraryViewController.swift */; };
+		410E2B82244523820062437D /* createGroupContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B81244523820062437D /* createGroupContainerViewController.swift */; };
+		410E2B84244525C20062437D /* groupCreationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B83244525C20062437D /* groupCreationPageViewController.swift */; };
+		410E2B8724454B4C0062437D /* PageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B8624454B4C0062437D /* PageOneViewController.swift */; };
+		410E2B8924454B5A0062437D /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B8824454B5A0062437D /* PageTwoViewController.swift */; };
+		4114F8EB24491BC600040BA7 /* songDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4114F8EA24491BC600040BA7 /* songDetailsViewController.swift */; };
 		4168635D24242A1E00B3A321 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 4168635C24242A1E00B3A321 /* fonts */; };
 		417A3B28243A92B0000FFF45 /* music in Resources */ = {isa = PBXBuildFile; fileRef = 417A3B26243A929E000FFF45 /* music */; };
 		41AF3C49242A926900DC4633 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C48242A926900DC4633 /* RoundButton.swift */; };
@@ -44,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		410A4F1F244695C300952C6D /* playViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playViewController.swift; sourceTree = "<group>"; };
+		410E2B7F244505F50062437D /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		410E2B81244523820062437D /* createGroupContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupContainerViewController.swift; sourceTree = "<group>"; };
+		410E2B83244525C20062437D /* groupCreationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupCreationPageViewController.swift; sourceTree = "<group>"; };
+		410E2B8624454B4C0062437D /* PageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneViewController.swift; sourceTree = "<group>"; };
+		410E2B8824454B5A0062437D /* PageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
+		4114F8EA24491BC600040BA7 /* songDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songDetailsViewController.swift; sourceTree = "<group>"; };
 		4168635C24242A1E00B3A321 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		417A3B26243A929E000FFF45 /* music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = music; sourceTree = "<group>"; };
 		41AF3C48242A926900DC4633 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -94,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410E2B8524454B180062437D /* Group Creation Pages */ = {
+			isa = PBXGroup;
+			children = (
+				410E2B8624454B4C0062437D /* PageOneViewController.swift */,
+				410E2B8824454B5A0062437D /* PageTwoViewController.swift */,
+			);
+			path = "Group Creation Pages";
+			sourceTree = "<group>";
+		};
 		41BCB0CB24240E19002BE02D = {
 			isa = PBXGroup;
 			children = (
@@ -117,14 +140,20 @@
 		41BCB0D624240E19002BE02D /* spotifyGroups */ = {
 			isa = PBXGroup;
 			children = (
+				410E2B8524454B180062437D /* Group Creation Pages */,
 				41BCB0D724240E19002BE02D /* AppDelegate.swift */,
+				410E2B83244525C20062437D /* groupCreationPageViewController.swift */,
 				41BCB0D924240E19002BE02D /* SceneDelegate.swift */,
 				41BCB0DB24240E19002BE02D /* ViewController.swift */,
 				41BCB10B24242092002BE02D /* LoginViewController.swift */,
 				41AF3C4A242A96E700DC4633 /* LoginInputViewController.swift */,
 				41AF3C50242AAECC00DC4633 /* ToolbarViewController.swift */,
 				41BCB0DD24240E19002BE02D /* Main.storyboard */,
+				4114F8EA24491BC600040BA7 /* songDetailsViewController.swift */,
+				410A4F1F244695C300952C6D /* playViewController.swift */,
+				410E2B81244523820062437D /* createGroupContainerViewController.swift */,
 				41FA9DC4242ABEC400745CDA /* musicViewController.swift */,
+				410E2B7F244505F50062437D /* LibraryViewController.swift */,
 				41AF3C4C242A9B8D00DC4633 /* HomeViewController.swift */,
 				41AF3C48242A926900DC4633 /* RoundButton.swift */,
 				41BCB1072424108D002BE02D /* NavigationController.swift */,
@@ -289,14 +318,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				41AF3C49242A926900DC4633 /* RoundButton.swift in Sources */,
+				410E2B80244505F50062437D /* LibraryViewController.swift in Sources */,
+				410E2B8924454B5A0062437D /* PageTwoViewController.swift in Sources */,
+				410E2B8724454B4C0062437D /* PageOneViewController.swift in Sources */,
 				41BCB0DC24240E19002BE02D /* ViewController.swift in Sources */,
 				41FA9DC5242ABEC400745CDA /* musicViewController.swift in Sources */,
 				41BCB1082424108D002BE02D /* NavigationController.swift in Sources */,
 				41AF3C4D242A9B8D00DC4633 /* HomeViewController.swift in Sources */,
+				410A4F20244695C300952C6D /* playViewController.swift in Sources */,
+				410E2B84244525C20062437D /* groupCreationPageViewController.swift in Sources */,
 				41BCB0D824240E19002BE02D /* AppDelegate.swift in Sources */,
 				41BCB10C24242092002BE02D /* LoginViewController.swift in Sources */,
+				4114F8EB24491BC600040BA7 /* songDetailsViewController.swift in Sources */,
 				41AF3C4B242A96E700DC4633 /* LoginInputViewController.swift in Sources */,
 				41AF3C51242AAECC00DC4633 /* ToolbarViewController.swift in Sources */,
+				410E2B82244523820062437D /* createGroupContainerViewController.swift in Sources */,
 				41BCB0DA24240E19002BE02D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
