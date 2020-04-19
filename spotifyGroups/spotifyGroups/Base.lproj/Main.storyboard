@@ -131,6 +131,7 @@
                     </view>
                     <connections>
                         <outlet property="inputField" destination="B38-tG-yER" id="K1f-vX-YPY"/>
+                        <outlet property="loginButton" destination="92x-qi-und" id="XA4-mJ-Wpo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBN-m8-tN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

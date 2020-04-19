@@ -7,9 +7,12 @@
 //
 
 import UIKit
+var userName:String!
 
 class LoginInputViewController: UIViewController {
 
+
+    @IBOutlet weak var loginButton: RoundButton!
     @IBOutlet weak var inputField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,13 @@ class LoginInputViewController: UIViewController {
         inputField.autocorrectionType = .no
         inputField.tintColor = .white
         // Do any additional setup after loading the view.
+        
+        //Adding action to button
+        loginButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        userName = inputField.text
     }
     
 
