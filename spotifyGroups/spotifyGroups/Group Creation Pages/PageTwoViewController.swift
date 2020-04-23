@@ -9,6 +9,7 @@
 import UIKit
 
 class PageTwoViewController: UIViewController {
+    
     @IBOutlet weak var view_one: UIView!
     @IBOutlet weak var view_two: UIView!
     @IBOutlet weak var view_three: UIView!

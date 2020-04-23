@@ -8,7 +8,8 @@
 
 import UIKit
 
-class songDetailsViewController: UIViewController {
+class songDetailsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    @IBOutlet weak var add_to_group: UIView!
     @IBOutlet weak var scroll_view: UIScrollView!
     var gradientLayer = CAGradientLayer()
     @IBOutlet weak var bottom_bar: UIView!
@@ -33,6 +34,11 @@ class songDetailsViewController: UIViewController {
         bottom_bar.isUserInteractionEnabled = true
         bottom_bar.addGestureRecognizer(closeGestureRecognizer)
         
+        //add to group
+        let shareGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(shareAction(tapGestureRecognizer:)))
+        add_to_group.isUserInteractionEnabled = true
+        add_to_group.addGestureRecognizer(shareGestureRecognizer)
+        
     }
     
 
@@ -40,6 +46,20 @@ class songDetailsViewController: UIViewController {
         self.dismiss(animated: true, completion: {
             self.presentingViewController?.dismiss(animated: true, completion: nil)
       })
+    }
+    
+    @objc func shareAction(tapGestureRecognizer: UITapGestureRecognizer){
+        let vc = (self.storyboard?.instantiateViewController(withIdentifier: "shareToGroup")) as! shareGroupContainerViewController
+        vc.modalPresentationStyle = .popover
+
+        if let presentationController = vc.popoverPresentationController {
+            presentationController.delegate = self
+            presentationController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+            presentationController.sourceView = self.view
+            presentationController.sourceRect = CGRect(x:self.view.bounds.midX, y: self.view.bounds.midY,width: 315,height: 230)
+
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 
 }

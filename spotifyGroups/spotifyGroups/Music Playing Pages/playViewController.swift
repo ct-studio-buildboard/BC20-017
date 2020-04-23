@@ -81,7 +81,6 @@ class playViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @objc func settingsTapped(tapGestureRecognizer: UITapGestureRecognizer)
           {
               //We want to present "songDetails"
-            print("Setting button is tapped")
             let vc = (self.storyboard?.instantiateViewController(withIdentifier: "songDetails")) as! songDetailsViewController as songDetailsViewController
             vc.modalPresentationStyle = .popover
 
