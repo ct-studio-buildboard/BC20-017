@@ -9,7 +9,6 @@
 import UIKit
 
 class ToolbarViewController: UITabBarController {
-
     @IBOutlet weak var toolBar: UITabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,17 +16,17 @@ class ToolbarViewController: UITabBarController {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "CircularStd-Book", size: 11)!], for: .selected)
         UITabBar.appearance().tintColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
         // Do any additional setup after loading the view.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func popInvite() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "invitePop") as! InviteViewController
+        vc.providesPresentationContextTransitionStyle = true
+        vc.definesPresentationContext = true
+        vc.modalPresentationStyle = UIModalPresentationStyle.overFullScreen;
+        audioPlayer.play()
+        self.present(vc, animated: true, completion: nil)
     }
-    */
-
+ 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 var userName:String!
 
 class LoginInputViewController: UIViewController {
@@ -14,6 +15,7 @@ class LoginInputViewController: UIViewController {
 
     @IBOutlet weak var loginButton: RoundButton!
     @IBOutlet weak var inputField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationController?.isToolbarHidden = true
@@ -22,6 +24,7 @@ class LoginInputViewController: UIViewController {
         inputField.leftViewMode = UITextField.ViewMode.always
         inputField.leftView = spacerView
         inputField.layer.cornerRadius = 5
+        inputField.layer.masksToBounds = true
         inputField.autocorrectionType = .no
         inputField.tintColor = .white
         // Do any additional setup after loading the view.
