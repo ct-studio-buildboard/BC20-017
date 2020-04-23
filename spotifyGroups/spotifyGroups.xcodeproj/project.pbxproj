@@ -35,6 +35,7 @@
 		41CD96FF24510CB5009277CF /* OptionalCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CD96FE24510CB5009277CF /* OptionalCommentViewController.swift */; };
 		41CD970124510DD8009277CF /* shareGroupContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CD970024510DD8009277CF /* shareGroupContainerViewController.swift */; };
 		41CD970324510E28009277CF /* SharePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CD970224510E28009277CF /* SharePageViewController.swift */; };
+		41CD97052451374D009277CF /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CD97042451374D009277CF /* CommentsViewController.swift */; };
 		41CEF807244E186A00162A5C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CEF806244E186A00162A5C /* FeedViewController.swift */; };
 		41CEF809244E187700162A5C /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CEF808244E187700162A5C /* ChartsViewController.swift */; };
 		41CEF80B244E188200162A5C /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CEF80A244E188200162A5C /* MembersViewController.swift */; };
@@ -95,6 +96,7 @@
 		41CD96FE24510CB5009277CF /* OptionalCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalCommentViewController.swift; sourceTree = "<group>"; };
 		41CD970024510DD8009277CF /* shareGroupContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shareGroupContainerViewController.swift; sourceTree = "<group>"; };
 		41CD970224510E28009277CF /* SharePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePageViewController.swift; sourceTree = "<group>"; };
+		41CD97042451374D009277CF /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		41CEF806244E186A00162A5C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		41CEF808244E187700162A5C /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		41CEF80A244E188200162A5C /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				41CEF805244E184200162A5C /* Group Detail Pages */,
 				410E2B8524454B180062437D /* Group Creation Pages */,
 				41BCB0D724240E19002BE02D /* AppDelegate.swift */,
+				41CD97042451374D009277CF /* CommentsViewController.swift */,
 				41BCB0D924240E19002BE02D /* SceneDelegate.swift */,
 				4194267B244E6F32006BC947 /* InviteViewController.swift */,
 				41BCB0DB24240E19002BE02D /* ViewController.swift */,
@@ -387,6 +390,7 @@
 				41CEF807244E186A00162A5C /* FeedViewController.swift in Sources */,
 				41CEF810244E2FA800162A5C /* GroupDetailHomeViewController.swift in Sources */,
 				41CD96FD24510CA4009277CF /* ChooseGroupsViewController.swift in Sources */,
+				41CD97052451374D009277CF /* CommentsViewController.swift in Sources */,
 				41CEF80B244E188200162A5C /* MembersViewController.swift in Sources */,
 				41CEF80E244E1F3900162A5C /* GroupDetailsPageViewController.swift in Sources */,
 				41CD96FF24510CB5009277CF /* OptionalCommentViewController.swift in Sources */,

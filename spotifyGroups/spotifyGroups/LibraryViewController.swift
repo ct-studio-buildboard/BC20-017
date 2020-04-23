@@ -57,7 +57,6 @@ class LibraryViewController: UIViewController {
         }
         
         task.resume()
->>>>>>> 3c1f5958e0be7cb9e560c5dc5317505094648fdd
     }
     
     @objc func oneTapped(tapGestureRecognizer: UITapGestureRecognizer)
