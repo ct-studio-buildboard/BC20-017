@@ -22,6 +22,42 @@ class LibraryViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(oneTapped(tapGestureRecognizer:)))
         group_block1.isUserInteractionEnabled = true
         group_block1.addGestureRecognizer(tapGestureRecognizer)
+        let name = userName.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        
+        // Prepare URL
+        let url = URL(string: "http://spotify-env.eba-iqymqugf.us-west-2.elasticbeanstalk.com/api/getGroups/" + name)
+        guard let requestUrl = url else { fatalError() }
+        
+        // Prepare URL Request Object
+        let request = URLRequest(url: requestUrl)
+        
+        // Perform HTTP Request
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                
+            // Check for Error
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+     
+            // Convert HTTP Response Data to a String / JSON
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string:\n \(dataString)")
+                do {
+                    if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
+                    {
+                       print(jsonArray) // use the json here
+                    } else {
+                        print("bad json")
+                    }
+                } catch let error as NSError {
+                    print(error)
+                }
+            }
+        }
+        
+        task.resume()
+>>>>>>> 3c1f5958e0be7cb9e560c5dc5317505094648fdd
     }
     
     @objc func oneTapped(tapGestureRecognizer: UITapGestureRecognizer)
