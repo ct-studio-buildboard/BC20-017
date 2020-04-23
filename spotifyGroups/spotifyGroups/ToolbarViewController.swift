@@ -25,7 +25,7 @@ class ToolbarViewController: UITabBarController {
         vc.providesPresentationContextTransitionStyle = true
         vc.definesPresentationContext = true
         vc.modalPresentationStyle = UIModalPresentationStyle.overFullScreen;
-        audioPlayer.play()
+        //audioPlayer.play()
         self.present(vc, animated: true, completion: nil)
     }
  

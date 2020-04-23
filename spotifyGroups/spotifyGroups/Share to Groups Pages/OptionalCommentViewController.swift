@@ -52,7 +52,7 @@ class OptionalCommentViewController: UIViewController {
 //        song1.addGestureRecognizer(tapGestureRecognizerOne)
         
          //Creating the Finish Button
-        button.cornerRadius = 25
+        button.cornerRadius = 20
         button.backgroundColor = UIColor.white
         button.setTitleColor(.black, for: .normal)
         button.setTitle("SHARE", for: .normal)

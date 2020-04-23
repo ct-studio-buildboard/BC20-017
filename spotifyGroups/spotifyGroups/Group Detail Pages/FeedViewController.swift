@@ -34,18 +34,23 @@ class FeedViewController: UIViewController, UIPopoverPresentationControllerDeleg
     //comment 1 tapped
     @objc func oneTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-       
+       let vc = storyboard?.instantiateViewController(withIdentifier: "commentsPage") as! CommentsViewController
+        vc.modalPresentationStyle = .fullScreen
+       self.present(vc, animated: true, completion: nil)
     }
        
     //comment 2 tapped
     @objc func twoTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-     
+        let vc = storyboard?.instantiateViewController(withIdentifier: "commentsPage") as! CommentsViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     //song image tapped
     @objc func threeTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
+        audioPlayer.play()
         let vc = (self.storyboard?.instantiateViewController(withIdentifier: "playView")) as! playViewController as playViewController
         vc.modalPresentationStyle = .popover
 
