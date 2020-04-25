@@ -30,6 +30,11 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     var groups = [Group]()
     var loaded = false
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadGroupData()
+        self.groupTable.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // groups_scroll.showsVerticalScrollIndicator = false
@@ -44,7 +49,6 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
         loadGroupData()
         self.groupTable.delegate = self
         self.groupTable.dataSource = self
-        print(self.groups.count)
     }
     
     private func loadGroupData() {
@@ -70,6 +74,8 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
                 print("Response data string:\n \(dataString)")
                 do {
                     if let jsonData = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>] {
+                        // Reset groupData
+                        self.groups = [Group]()
                         for group in jsonData {
                             if let groupData = Group(dictionary: group) {
                                 self.groups.append(groupData)
@@ -115,6 +121,18 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.nameLabel.text = group.groupName
         
         return cell
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "Create Group") {
+            if let destinationVC = segue.destination as? createGroupContainerViewController {
+                destinationVC.dismissHandler = {
+                    self.loadGroupData()
+                    self.groupTable.reloadData()
+                }
+            }
+        }
     }
     
     @objc func oneTapped(tapGestureRecognizer: UITapGestureRecognizer)

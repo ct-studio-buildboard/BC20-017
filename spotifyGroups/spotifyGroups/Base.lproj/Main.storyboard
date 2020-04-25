@@ -2431,7 +2431,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="hJa-vb-PQJ" kind="popoverPresentation" popoverAnchorView="Q21-xR-Xik" id="qKA-PJ-2Z8">
+                                    <segue destination="hJa-vb-PQJ" kind="popoverPresentation" identifier="Create Group" popoverAnchorView="Q21-xR-Xik" id="qKA-PJ-2Z8">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
