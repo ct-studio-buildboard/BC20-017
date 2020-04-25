@@ -2,15 +2,6 @@ company:
   name: Spotify
   logo: photos/spotify-logo.png
 product_narrative:
-  Team 222's Social Collaboration feature will both simply and diversify your listening
-  experience with friends and family by providing a collaborative environment based on
-  individual taste profiles of user-generated groups. One of the pain points we identified in our
-  user research was the difficulty of deciding what to play in a group setting or sharing music 
-  or podcast contents. This problem arises in the narratives of...
-    1. User finding it difficult to share, set up, and maintain playlists with friends
-    2. User experiencing friction in finding new contents on Spotify and only trusting friends
-        and family as a source of recommendation
-    3. User desiring an engaging tool to co-create playlists in events
   Our solution will allow users to create custom groups of shared listeners and suggest
   playlists of music and podcasts based on data analytics and algorithms, which is the key
   strength of Spotify. By doing this, we aspire to deliver collaborative personalization
