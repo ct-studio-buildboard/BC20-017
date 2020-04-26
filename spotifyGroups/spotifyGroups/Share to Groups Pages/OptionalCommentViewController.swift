@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionalCommentViewController: UIViewController {
+class OptionalCommentViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var comment_field: UITextField!
     @IBOutlet weak var selected_song1: UIImageView!
@@ -32,13 +32,19 @@ class OptionalCommentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
+        let placeholder = comment_field.placeholder ?? "" //There should be a placeholder set in storyboard or elsewhere string or pass empty
+        comment_field.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        
+        
         let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         comment_field.leftViewMode = UITextField.ViewMode.always
         comment_field.leftView = spacerView
-        comment_field.layer.cornerRadius = 20
+        comment_field.layer.cornerRadius = 18
         comment_field.layer.masksToBounds = true
         comment_field.autocorrectionType = .no
         comment_field.tintColor = .white
+        comment_field.delegate = self
 
         // Do any additional setup after loading the view.
         main_view.layer.cornerRadius = 8;
@@ -52,7 +58,7 @@ class OptionalCommentViewController: UIViewController {
 //        song1.addGestureRecognizer(tapGestureRecognizerOne)
         
          //Creating the Finish Button
-        button.cornerRadius = 20
+        button.cornerRadius = 23
         button.backgroundColor = UIColor.white
         button.setTitleColor(.black, for: .normal)
         button.setTitle("SHARE", for: .normal)
@@ -77,10 +83,17 @@ class OptionalCommentViewController: UIViewController {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-           self.dismiss(animated: true, completion: {
-               self.presentingViewController?.dismiss(animated: true, completion: nil)
-         })
-       }
+        
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+//           self.dismiss(animated: true, completion: {
+//               self.presentingViewController?.dismiss(animated: true, completion: nil)
+//         })
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 
 
 }

@@ -19,6 +19,8 @@ class playViewController: UIViewController, UIPopoverPresentationControllerDeleg
     let playImg = UIImage(systemName: "play.circle.fill")!
     let pauseImg = UIImage(systemName: "pause.circle.fill")!
     
+    var delegate:playViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -70,11 +72,13 @@ class playViewController: UIViewController, UIPopoverPresentationControllerDeleg
            let tappedImage = tapGestureRecognizer.view as! UIImageView
             
            if  audioPlayer.isPlaying{
-               audioPlayer.pause()
+                audioPlayer.pause()
                 play_pause_button.image = playImg
+                delegate?.swapIcons()
            } else {
-            audioPlayer.play()
-            play_pause_button.image = pauseImg
+                audioPlayer.play()
+                play_pause_button.image = pauseImg
+                delegate?.swapIcons()
             }
        }
     
@@ -94,15 +98,5 @@ class playViewController: UIViewController, UIPopoverPresentationControllerDeleg
             }
           }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

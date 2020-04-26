@@ -10,6 +10,7 @@ import UIKit
 
 class CommentsViewController: UIViewController {
 
+    @IBOutlet weak var comment_bar_view: UIView!
     @IBOutlet weak var back_button: UIView!
     @IBOutlet weak var comments_textfield: UITextField!
     override func viewDidLoad() {

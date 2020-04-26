@@ -10,22 +10,17 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var groupsButton: UIButton!
     
-    @IBOutlet weak var main_scroll: UIScrollView!
-    @IBOutlet weak var top_groups: UIScrollView!
-    @IBOutlet weak var top_podcasts: UIScrollView!
-    @IBOutlet weak var recently_played: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        main_scroll.showsVerticalScrollIndicator = false
-        top_podcasts.showsHorizontalScrollIndicator = false
-        top_groups.showsHorizontalScrollIndicator = false
-        recently_played.showsHorizontalScrollIndicator = false
+        groupsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         setNeedsStatusBarAppearanceUpdate()
     }
-    
+    @objc func buttonAction(sender: UIButton!) {
+          (self.tabBarController as? ToolbarViewController)?.groupTab()
+      }
 
 
 }
