@@ -74,6 +74,15 @@ class PageTwoViewController: UIViewController {
         self.dismiss(animated: true, completion: {
             self.presentingViewController?.dismiss(animated: true, completion: nil)})
         
+        // Set up a struct for sending json for POST to the url
+        let parameters: [String: Any] = [
+            "userName": userName!,
+            "groupName": "Cornell Tech",
+            "groupDesc": "Group for Cornell Tech Students",
+            "members": ["Max Klein", "Bobo Liu", "Shuhan Zhang"]
+        ]
+        
+        print( JSONSerialization.isValidJSONObject(parameters))
         // Prepare URL
         let url = URL(string: "http://spotify-env.eba-iqymqugf.us-west-2.elasticbeanstalk.com/api/createGroup/")
         guard let requestUrl = url else { fatalError() }
@@ -81,13 +90,12 @@ class PageTwoViewController: UIViewController {
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
-         
-        // HTTP Request Parameters which will be sent in HTTP Request Body
-        // let postString = "userName=" + userName + "&groupName=" + + "&groupDesc=" +
-        let postString = "userName=test"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+    
+        let json_data = try? JSONSerialization.data(withJSONObject: parameters)
         
-        // Set HTTP Request Body
-        request.httpBody = postString.data(using: String.Encoding.utf8);
+        request.httpBody = json_data
         
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in

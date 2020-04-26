@@ -9,6 +9,8 @@ from rest_framework.response import Response
 
 from .models import UserInfo, GroupInfo, GroupMember, Following
 
+import json
+
 @csrf_exempt
 @api_view(['POST'])
 def login(request):
@@ -44,24 +46,25 @@ def init_creation(request, userInfo):
 @csrf_exempt
 @api_view(['POST'])
 def create_group(request):
-    group = GroupInfo.objects.filter(groupName = request.POST['groupName'])
+    received_json_data=json.loads(request.body)
+    group = GroupInfo.objects.filter(groupName = received_json_data['groupName'])
     # If group does not exist, creates the group
     if (group.exists() == False):
         # Updates the GroupInfo table
-        new_group = GroupInfo(groupName = request.POST['groupName'], groupDesc = request.POST['groupDesc'])
+        new_group = GroupInfo(groupName = received_json_data['groupName'], groupDesc = received_json_data['groupDesc'])
         new_group.save()
 
         # Updates the GroupMember table
-        group_creator = UserInfo.objects.get(userName = request.POST['userName'])
+        group_creator = UserInfo.objects.get(userName = received_json_data['userName'])
         new_group_member = GroupMember.objects.create(userInfo = group_creator, groupInfo = new_group, pendingStatus = False)
         new_group_member.save()
 
-        for member_name in request.POST.getlist('members'):
+        for member_name in received_json_data['members']:
             group_member = UserInfo.objects.get(userName = member_name)
             new_group_member = GroupMember.objects.create(userInfo = group_member, groupInfo = new_group, pendingStatus = True)
             new_group_member.save()
 
-    return Response(request.POST['groupName'], status = status.HTTP_201_CREATED)
+    return Response(received_json_data['members'], status = status.HTTP_201_CREATED)
 
 @csrf_exempt
 @api_view(['GET'])
