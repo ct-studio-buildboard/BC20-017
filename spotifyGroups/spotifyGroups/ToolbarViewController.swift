@@ -20,6 +20,10 @@ class ToolbarViewController: UITabBarController {
         
     }
     
+    func groupTab() {
+        self.selectedIndex = 2
+    }
+    
     func popInvite() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "invitePop") as! InviteViewController
         vc.providesPresentationContextTransitionStyle = true

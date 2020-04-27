@@ -18,21 +18,39 @@ class PageOneViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         main_view.layer.cornerRadius = 8;
         main_view.layer.masksToBounds = true;
+        groupName.delegate = self
+        groupDesc.delegate = self
+        groupName.textContainer.maximumNumberOfLines = 1
+        groupName.textContainer.lineBreakMode = .byTruncatingTail
+        groupDesc.textContainer.maximumNumberOfLines = 1
+        groupDesc.textContainer.lineBreakMode = .byTruncatingTail
+        
+        // Do any additional setup after loading the view.
+        let name = userName.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
         // For placeholder text in Group Name and Group Description
-        groupName.delegate = self
         groupName.text = "Group Name"
         groupName.textColor = UIColor.lightGray
         
-        groupDesc.delegate = self
         groupDesc.text = "Group Description"
         groupDesc.textColor = UIColor.lightGray
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = ""
-            textView.textColor = UIColor.white
+        if textView.text == "Group Name" {
+            groupName.text = String()
+        }
+        else if textView.text == "Group Description" {
+            groupDesc.text = String()
         }
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+
 }

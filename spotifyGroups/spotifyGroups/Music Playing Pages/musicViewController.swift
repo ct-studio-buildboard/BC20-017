@@ -10,7 +10,13 @@ import UIKit
 import AVFoundation
 var audioPlayer:AVAudioPlayer!
 
-class musicViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+protocol playViewControllerDelegate {
+    func swapIcons()
+}
+
+
+class musicViewController: UIViewController, UIPopoverPresentationControllerDelegate, playViewControllerDelegate {
+    
 
     @IBOutlet weak var main_view: UIView!
     @IBOutlet weak var progress_bar: UIProgressView!
@@ -33,7 +39,7 @@ class musicViewController: UIViewController, UIPopoverPresentationControllerDele
         main_view.addGestureRecognizer(songGestureRecognizer)
         
         // Do any additional setup after loading the view.
-        let url = Bundle.main.url(forResource: "music/Bob_Marley_-_Is_This_Love", withExtension: "mp3")!
+        let url = Bundle.main.url(forResource: "music/betternow", withExtension: "mp3")!
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             guard let player = audioPlayer else { return }
@@ -45,6 +51,7 @@ class musicViewController: UIViewController, UIPopoverPresentationControllerDele
             print(error.localizedDescription)
         }
     }
+    
     
     @objc func updateAudioProgressView() {
         if audioPlayer.isPlaying {
@@ -68,6 +75,7 @@ class musicViewController: UIViewController, UIPopoverPresentationControllerDele
     {
         let vc = (self.storyboard?.instantiateViewController(withIdentifier: "playView")) as! playViewController as playViewController
         vc.modalPresentationStyle = .popover
+        vc.delegate = self
 
         if let presentationController = vc.popoverPresentationController {
             presentationController.delegate = self
@@ -79,15 +87,12 @@ class musicViewController: UIViewController, UIPopoverPresentationControllerDele
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func swapIcons() {
+        if playImage.image == playImg{
+           playImage.image = pauseImg
+        } else {
+           playImage.image = playImg
+        }
     }
-    */
 
 }
