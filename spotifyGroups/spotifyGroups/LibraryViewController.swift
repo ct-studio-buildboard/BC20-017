@@ -118,7 +118,7 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
         // Fetches the appropriate meal for the data source layout.
         let group = self.groups[indexPath.row]
         
-        cell.nameLabel.text = group.groupName
+        // cell.nameLabel.text = group.groupName
         
         return cell
     }

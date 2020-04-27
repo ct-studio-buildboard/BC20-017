@@ -115,10 +115,12 @@ class PageTwoViewController: UIViewController {
         repeat {
             RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
         } while !self.loaded
+        self.loaded = false
         
         handler()
         
         self.dismiss(animated: true, completion: {
+            handler()
             self.presentingViewController?.dismiss(animated: true, completion: nil)})
     }
     
