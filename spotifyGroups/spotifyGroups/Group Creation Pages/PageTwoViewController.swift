@@ -62,7 +62,7 @@ class PageTwoViewController: UIViewController {
         
         //Creating the Finish Button
 //        button = RoundButton(frame: CGRect(x: 97, y: 630, width: 180, height: 46))
-        button.cornerRadius = 20
+        button.cornerRadius = 23
         button.backgroundColor = UIColor.white
         button.setTitleColor(.black, for: .normal)
         button.setTitle("FINISH", for: .normal)

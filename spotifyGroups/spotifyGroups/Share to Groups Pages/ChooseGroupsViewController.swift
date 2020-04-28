@@ -12,10 +12,8 @@ class ChooseGroupsViewController: UIViewController {
 
     @IBOutlet weak var check_one: UIImageView!
     @IBOutlet weak var check_two: UIImageView!
-    @IBOutlet weak var check_three: UIImageView!
     @IBOutlet weak var group1: UIView!
     @IBOutlet weak var group2: UIView!
-    @IBOutlet weak var group3: UIView!
     @IBOutlet weak var main_view: UIView!
     let selectedImage = UIImage(named: "selected_circle")!
     let unselectedImage = UIImage(named: "unselected_circle")!
@@ -31,8 +29,6 @@ class ChooseGroupsViewController: UIViewController {
         group1.layer.masksToBounds = true;
         group2.layer.cornerRadius = 8;
         group2.layer.masksToBounds = true;
-        group3.layer.cornerRadius = 8;
-        group3.layer.masksToBounds = true;
         
         let tapGestureRecognizerOne = UITapGestureRecognizer(target: self, action: #selector(oneTapped(tapGestureRecognizer:)))
         group1.isUserInteractionEnabled = true
@@ -42,10 +38,7 @@ class ChooseGroupsViewController: UIViewController {
         group2.isUserInteractionEnabled = true
         group2.addGestureRecognizer(tapGestureRecognizerTwo)
         
-        let tapGestureRecognizerThree = UITapGestureRecognizer(target: self, action: #selector(threeTapped(tapGestureRecognizer:)))
-        group3.isUserInteractionEnabled = true
-        group3.addGestureRecognizer(tapGestureRecognizerThree)
-        
+
     }
     
     @objc func oneTapped(tapGestureRecognizer: UITapGestureRecognizer)
@@ -65,14 +58,7 @@ class ChooseGroupsViewController: UIViewController {
                 check_two.image = selectedImage
            }
        }
-    @objc func threeTapped(tapGestureRecognizer: UITapGestureRecognizer)
-       {
-           if check_three.image == selectedImage {
-               check_three.image = unselectedImage
-           } else {
-               check_three.image = selectedImage
-           }
-       }
+
     
 
 }
