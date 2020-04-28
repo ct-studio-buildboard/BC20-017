@@ -8,8 +8,12 @@
 
 import UIKit
 
-class createGroupContainerViewController: UIViewController {
+var handler: (() -> Void)!
 
+class createGroupContainerViewController: UIViewController {
+    
+    var dismissHandler: (() -> Void)!
+    
     @IBOutlet weak var create_group_label_view: UIView!
     @IBOutlet weak var settings: UIView!
     override func viewDidLoad() {
@@ -18,6 +22,8 @@ class createGroupContainerViewController: UIViewController {
         create_group_label_view.layer.masksToBounds = true;
 //        settings.layer.cornerRadius = 8;
 //        settings.layer.masksToBounds = true;
+        
+        handler = self.dismissHandler
         // Do any additional setup after loading the view.
     }
     

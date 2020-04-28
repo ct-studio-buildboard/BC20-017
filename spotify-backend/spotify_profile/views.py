@@ -48,6 +48,13 @@ def init_creation(request, userInfo):
 def create_group(request):
     received_json_data=json.loads(request.body)
     group = GroupInfo.objects.filter(groupName = received_json_data['groupName'])
+
+    # Alter name until group name does not exist
+    groupName = received_json_data['groupName']
+    while (group.exists() == True):
+        groupName = groupName + '1'
+        group = GroupInfo.objects.filter(groupName = groupName)
+        
     # If group does not exist, creates the group
     if (group.exists() == False):
         # Updates the GroupInfo table

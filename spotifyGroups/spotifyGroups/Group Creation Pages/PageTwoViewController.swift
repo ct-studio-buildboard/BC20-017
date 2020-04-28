@@ -27,6 +27,7 @@ class PageTwoViewController: UIViewController {
     var button = RoundButton(frame: CGRect(x: 97, y: 630, width: 180, height: 46))
     
     var total_selected = 0
+    var loaded = false
     
     func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) {
         gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
@@ -71,9 +72,6 @@ class PageTwoViewController: UIViewController {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-        self.dismiss(animated: true, completion: {
-            self.presentingViewController?.dismiss(animated: true, completion: nil)})
-        
         // Set up a struct for sending json for POST to the url
         let parameters: [String: Any] = [
             "userName": userName!,
@@ -82,7 +80,6 @@ class PageTwoViewController: UIViewController {
             "members": ["Max Klein", "Bobo Liu", "Shuhan Zhang"]
         ]
         
-        print( JSONSerialization.isValidJSONObject(parameters))
         // Prepare URL
         let url = URL(string: "http://spotify-env.eba-iqymqugf.us-west-2.elasticbeanstalk.com/api/createGroup/")
         guard let requestUrl = url else { fatalError() }
@@ -99,6 +96,7 @@ class PageTwoViewController: UIViewController {
         
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                self.loaded = true
                 
                 // Check for Error
                 if let error = error {
@@ -113,6 +111,17 @@ class PageTwoViewController: UIViewController {
         }
         
         task.resume()
+        
+        repeat {
+            RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
+        } while !self.loaded
+        self.loaded = false
+        
+        handler()
+        
+        self.dismiss(animated: true, completion: {
+            handler()
+            self.presentingViewController?.dismiss(animated: true, completion: nil)})
     }
     
     @objc func oneTapped(tapGestureRecognizer: UITapGestureRecognizer)

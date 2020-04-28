@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1B7F4D24542A9D005C05AD /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B7F4C24542A9D005C05AD /* GroupTableViewCell.swift */; };
 		410A4F20244695C300952C6D /* playViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410A4F1F244695C300952C6D /* playViewController.swift */; };
 		410E2B80244505F50062437D /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B7F244505F50062437D /* LibraryViewController.swift */; };
 		410E2B82244523820062437D /* createGroupContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B81244523820062437D /* createGroupContainerViewController.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1B7F4C24542A9D005C05AD /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		410A4F1F244695C300952C6D /* playViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playViewController.swift; sourceTree = "<group>"; };
 		410E2B7F244505F50062437D /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		410E2B81244523820062437D /* createGroupContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupContainerViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				41AF3C4A242A96E700DC4633 /* LoginInputViewController.swift */,
 				41AF3C50242AAECC00DC4633 /* ToolbarViewController.swift */,
 				41BCB0DD24240E19002BE02D /* Main.storyboard */,
+				3D1B7F4C24542A9D005C05AD /* GroupTableViewCell.swift */,
 				410E2B7F244505F50062437D /* LibraryViewController.swift */,
 				41AF3C4C242A9B8D00DC4633 /* HomeViewController.swift */,
 				41AF3C48242A926900DC4633 /* RoundButton.swift */,
@@ -385,6 +388,7 @@
 				41FA9DC5242ABEC400745CDA /* musicViewController.swift in Sources */,
 				41BCB1082424108D002BE02D /* NavigationController.swift in Sources */,
 				41AF3C4D242A9B8D00DC4633 /* HomeViewController.swift in Sources */,
+				3D1B7F4D24542A9D005C05AD /* GroupTableViewCell.swift in Sources */,
 				410A4F20244695C300952C6D /* playViewController.swift in Sources */,
 				410E2B84244525C20062437D /* groupCreationPageViewController.swift in Sources */,
 				41CEF807244E186A00162A5C /* FeedViewController.swift in Sources */,
