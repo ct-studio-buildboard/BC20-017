@@ -39,7 +39,7 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         // groups_scroll.showsVerticalScrollIndicator = false
         // Do any additional setup after loading the view.
-        (self.tabBarController as? ToolbarViewController)?.popInvite()
+//        (self.tabBarController as? ToolbarViewController)?.popInvite()
         //Get groups API call
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(oneTapped(tapGestureRecognizer:)))
 //        group_block1.isUserInteractionEnabled = true

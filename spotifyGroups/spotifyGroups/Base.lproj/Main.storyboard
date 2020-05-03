@@ -532,10 +532,6 @@
                                                 <viewLayoutGuide key="contentLayoutGuide" id="soA-8r-Bfu"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="a04-Wm-Mkf"/>
                                             </scrollView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notification" translatesAutoresizingMaskIntoConstraints="NO" id="ejZ-d1-ba4">
-                                                <rect key="frame" x="338" y="49" width="8" height="8"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4e-hr-6Hz">
                                                 <rect key="frame" x="295" y="27" width="79" height="62"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1581,7 +1577,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="WdH-kp-8AD" kind="relationship" relationship="rootViewController" id="bkv-Fb-Rwh"/>
+                        <segue destination="QG7-wV-sJU" kind="relationship" relationship="rootViewController" id="Vk3-RD-GbV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VT4-Dj-cNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2513,11 +2509,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nYw-sU-gHh">
                                 <rect key="frame" x="22" y="188" width="370" height="567"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupTableViewCell" rowHeight="230" id="ggo-eK-F5d" customClass="GroupTableViewCell" customModule="spotifyGroups" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="370" height="230"/>
@@ -2531,8 +2525,10 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2549,7 +2545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrr-Wm-lWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3861" y="858"/>
+            <point key="canvasLocation" x="4455" y="855"/>
         </scene>
         <!--Share Group Container View Controller-->
         <scene sceneID="c5P-PS-TbO">
@@ -2833,7 +2829,7 @@
             <objects>
                 <viewController id="QG7-wV-sJU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ECV-Sa-VBJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="music_page" translatesAutoresizingMaskIntoConstraints="NO" id="zU7-8F-3x9">
@@ -2844,7 +2840,7 @@
                                 <rect key="frame" x="266" y="44" width="136" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="YN4-KJ-zZY" kind="presentation" animates="NO" modalPresentationStyle="currentContext" id="eNF-BH-dNw"/>
+                                    <segue destination="WdH-kp-8AD" kind="presentation" animates="NO" modalPresentationStyle="currentContext" id="gBO-cQ-psz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2855,7 +2851,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyG-bG-Hlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4457" y="1550"/>
+            <point key="canvasLocation" x="3671" y="855"/>
         </scene>
         <!--Create Group Container View Controller-->
         <scene sceneID="Dbl-5r-5Sl">
@@ -3045,7 +3041,6 @@
         <image name="heart_icon" width="66" height="57"/>
         <image name="music_page" width="1125" height="2436"/>
         <image name="nexttrack_icon" width="66" height="69"/>
-        <image name="notification" width="24" height="24"/>
         <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
         <image name="placeholder_album_image" width="450" height="450"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
