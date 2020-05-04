@@ -10,6 +10,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var playlist6: UIView!
+    @IBOutlet weak var playlist5: UIView!
+    @IBOutlet weak var playlist4: UIView!
+    @IBOutlet weak var playlist3: UIView!
+    @IBOutlet weak var playlist2: UIView!
+    @IBOutlet weak var playlist1: UIView!
     @IBOutlet weak var groupsButton: UIButton!
     
     override func viewDidLoad() {

@@ -14,6 +14,8 @@ class PageTwoViewController: UIViewController {
     @IBOutlet weak var view_two: UIView!
     @IBOutlet weak var view_three: UIView!
     @IBOutlet weak var view_four: UIView!
+    @IBOutlet weak var view_five: UIView!
+    @IBOutlet weak var view_six: UIView!
     
     @IBOutlet weak var main_view: UIView!
     
@@ -23,6 +25,8 @@ class PageTwoViewController: UIViewController {
     @IBOutlet weak var check_two: UIImageView!
     @IBOutlet weak var check_three: UIImageView!
     @IBOutlet weak var check_four: UIImageView!
+    @IBOutlet weak var check_five: UIImageView!
+    @IBOutlet weak var check_six: UIImageView!
     var gradientLayer = CAGradientLayer()
     var button = RoundButton(frame: CGRect(x: 97, y: 630, width: 180, height: 46))
     
@@ -59,6 +63,14 @@ class PageTwoViewController: UIViewController {
         let tapGestureRecognizerFour = UITapGestureRecognizer(target: self, action: #selector(fourTapped(tapGestureRecognizer:)))
         view_four.isUserInteractionEnabled = true
         view_four.addGestureRecognizer(tapGestureRecognizerFour)
+        
+        let tapGestureRecognizerFive = UITapGestureRecognizer(target: self, action: #selector(fiveTapped(tapGestureRecognizer:)))
+        view_five.isUserInteractionEnabled = true
+        view_five.addGestureRecognizer(tapGestureRecognizerFive)
+        
+        let tapGestureRecognizerSix = UITapGestureRecognizer(target: self, action: #selector(sixTapped(tapGestureRecognizer:)))
+        view_six.isUserInteractionEnabled = true
+        view_six.addGestureRecognizer(tapGestureRecognizerSix)
         
         //Creating the Finish Button
 //        button = RoundButton(frame: CGRect(x: 97, y: 630, width: 180, height: 46))
@@ -190,6 +202,40 @@ class PageTwoViewController: UIViewController {
                 main_view.addSubview(button)
            }
        }
+
+    @objc func fiveTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        if check_five.image == selectedImage {
+            check_five.image = unselectedImage
+            total_selected -= 1
+             if total_selected == 0 {
+                 gradientLayer.removeFromSuperlayer()
+                 button.removeFromSuperview()
+             }
+        } else {
+            check_five.image = selectedImage
+            total_selected += 1
+             setGradientBackground(colorTop: .clear, colorBottom: UIColor(rgb:0x121212))
+             main_view.addSubview(button)
+        }
+    }
+    
+    @objc func sixTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        if check_six.image == selectedImage {
+            check_six.image = unselectedImage
+            total_selected -= 1
+             if total_selected == 0 {
+                 gradientLayer.removeFromSuperlayer()
+                 button.removeFromSuperview()
+             }
+        } else {
+            check_six.image = selectedImage
+            total_selected += 1
+             setGradientBackground(colorTop: .clear, colorBottom: UIColor(rgb:0x121212))
+             main_view.addSubview(button)
+        }
+    }
     
 
 }

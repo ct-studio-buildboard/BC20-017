@@ -1,17 +1,16 @@
 //
-//  PageOneViewController.swift
+//  PageOneSubViewController.swift
 //  spotifyGroups
 //
-//  Created by Bobo Liu on 4/13/20.
+//  Created by Jae Min Cha on 04/05/2020.
 //  Copyright © 2020 Spotify. All rights reserved.
 //
 
 import UIKit
 
-class PageOneViewController: UIViewController, UITextViewDelegate {
+class PageOneSubViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var groupImage: UIImageView!
-    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var groupName: UITextView!
     @IBOutlet weak var groupDesc: UITextView!
     
@@ -36,15 +35,6 @@ class PageOneViewController: UIViewController, UITextViewDelegate {
         
         groupDesc.text = "Group Description"
         groupDesc.textColor = UIColor.lightGray
-        
-        //Adding action to button
-        button.addTarget(self, action: #selector(updateImage), for: .touchUpInside)
-    }
-    
-    @IBAction func updateImage(sender: UIButton) {
-        self.groupImage.image = UIImage(named: "new_222")
-        self.groupImage.layer.cornerRadius = 4
-        self.groupImage.layer.masksToBounds = true
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -63,4 +53,5 @@ class PageOneViewController: UIViewController, UITextViewDelegate {
         }
         return true
     }
+
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0D52B324604AEF00AE0DB8 /* PageTwoSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D52B224604AEF00AE0DB8 /* PageTwoSubViewController.swift */; };
 		3D1B7F4D24542A9D005C05AD /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B7F4C24542A9D005C05AD /* GroupTableViewCell.swift */; };
 		410A4F20244695C300952C6D /* playViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410A4F1F244695C300952C6D /* playViewController.swift */; };
 		410E2B80244505F50062437D /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2B7F244505F50062437D /* LibraryViewController.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0D52B224604AEF00AE0DB8 /* PageTwoSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoSubViewController.swift; sourceTree = "<group>"; };
 		3D1B7F4C24542A9D005C05AD /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		410A4F1F244695C300952C6D /* playViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playViewController.swift; sourceTree = "<group>"; };
 		410E2B7F244505F50062437D /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				410E2B83244525C20062437D /* groupCreationPageViewController.swift */,
 				410E2B8624454B4C0062437D /* PageOneViewController.swift */,
 				410E2B8824454B5A0062437D /* PageTwoViewController.swift */,
+				3D0D52B224604AEF00AE0DB8 /* PageTwoSubViewController.swift */,
 			);
 			path = "Group Creation Pages";
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				41BCB10C24242092002BE02D /* LoginViewController.swift in Sources */,
 				4114F8EB24491BC600040BA7 /* songDetailsViewController.swift in Sources */,
 				41CD970324510E28009277CF /* SharePageViewController.swift in Sources */,
+				3D0D52B324604AEF00AE0DB8 /* PageTwoSubViewController.swift in Sources */,
 				41AF3C4B242A96E700DC4633 /* LoginInputViewController.swift in Sources */,
 				41AF3C51242AAECC00DC4633 /* ToolbarViewController.swift in Sources */,
 				410E2B82244523820062437D /* createGroupContainerViewController.swift in Sources */,
