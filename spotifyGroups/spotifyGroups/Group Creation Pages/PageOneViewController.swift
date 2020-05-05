@@ -50,9 +50,11 @@ class PageOneViewController: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "Group Name" {
             groupName.text = String()
+            groupName.textColor = UIColor.white
         }
         else if textView.text == "Group Description" {
             groupDesc.text = String()
+            groupDesc.textColor = UIColor.white
         }
     }
     

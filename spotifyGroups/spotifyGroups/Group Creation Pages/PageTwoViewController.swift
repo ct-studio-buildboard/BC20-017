@@ -40,7 +40,7 @@ class PageTwoViewController: UIViewController {
         gradientLayer.locations = [0, 1]
         gradientLayer.frame = main_view.bounds
 
-        main_view.layer.insertSublayer(gradientLayer, at: 0)
+        main_view.layer.insertSublayer(gradientLayer, at: 20)
     }
     
     override func viewDidLoad() {
