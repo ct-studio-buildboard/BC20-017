@@ -22,7 +22,11 @@ class Group {
 }
 
 class LibraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    @IBOutlet weak var precreation_label: UILabel!
+    @IBOutlet weak var search_view: UIView!
+    @IBOutlet weak var filter_view: UIView!
+    
 //    @IBOutlet weak var group_block1: UIImageView!
     // @IBOutlet weak var groups_scroll: UIScrollView!
     
@@ -37,6 +41,11 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        search_view.layer.cornerRadius = 3;
+               search_view.layer.masksToBounds = true;
+               filter_view.layer.cornerRadius = 3;
+               filter_view.layer.masksToBounds = true;
         // groups_scroll.showsVerticalScrollIndicator = false
         // Do any additional setup after loading the view.
 //        (self.tabBarController as? ToolbarViewController)?.popInvite()
@@ -125,6 +134,7 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        precreation_label.removeFromSuperview()
         if (segue.identifier == "Create Group") {
             if let destinationVC = segue.destination as? createGroupContainerViewController {
                 destinationVC.dismissHandler = {
@@ -137,6 +147,7 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @objc func oneTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
+        precreation_label.removeFromSuperview()
         let vc = storyboard?.instantiateViewController(withIdentifier: "groupDetailHome") as! GroupDetailHomeViewController
              vc.providesPresentationContextTransitionStyle = true
              vc.definesPresentationContext = true
