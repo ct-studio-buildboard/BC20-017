@@ -1,4 +1,4 @@
-# Big Co Studio 
+# Big Co Studio - Spotify 
 
 ## Buildboard link
 http://buildboard-10044.cornelltech.io/bigco-studio-2020
