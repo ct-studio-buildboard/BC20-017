@@ -16,8 +16,30 @@ class PageOneViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var groupDesc: UITextView!
     
     @IBOutlet weak var main_view: UIView!
+    
+    var gradientLayer = CAGradientLayer()
+    var Nbutton = RoundButton(frame: CGRect(x: 97, y: 630, width: 180, height: 46))
+    
+    
+    func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) {
+        gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.3)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.7)
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = main_view.bounds
+
+        main_view.layer.insertSublayer(gradientLayer, at: 0)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        Nbutton.cornerRadius = 23
+        Nbutton.backgroundColor = UIColor.white
+        Nbutton.setTitleColor(.black, for: .normal)
+        Nbutton.setTitle("NEXT", for: .normal)
+        Nbutton.titleLabel?.font =  UIFont(name: "CircularStd-Bold", size: 12)
+        main_view.addSubview(Nbutton)
+        setGradientBackground(colorTop: .clear, colorBottom: UIColor(rgb:0x121212))
+        
         main_view.layer.cornerRadius = 8;
         main_view.layer.masksToBounds = true;
         groupName.delegate = self
