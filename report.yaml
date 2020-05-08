@@ -1,6 +1,6 @@
 company:
-  name: 222
-  logo: photos/spotify-logo.png
+  name: 222 (Spotify)
+  logo: photos/green-spotify-logo.png
 product_narrative:
   Our solution will allow users to create custom groups of shared listeners and suggest
   playlists of music and podcasts based on data analytics and algorithms, which is the key
@@ -8,30 +8,31 @@ product_narrative:
   experience to users and create a sense of community and social listening experience.
 team:
   picture: photos/team-photo.jpg
+  video: https://www.youtube.com/watch?v=qSNNhcsS8z0
   roster:
   - name: Chan Baik
     email: sb2435@cornell.edu
-    picture: photos/Chan.jpg
+    picture: photos/Chan.png
     program: MBA
   - name: Shuhan Zhang
     email: sz478@cornell.edu
-    picture: photos/Shuhan.jpg
+    picture: photos/Shuhan.png
     program: MBA
   - name: Max Klein
     email: kleim592@newschool.edu
-    picture: photos/Max.jpg
+    picture: photos/Max.png
     program: Design
   - name: Rebecca Gill-Clarke
     email: gillr456@newschool.edu
-    picture: photos/Rebecca.jpg
+    picture: photos/Rebecca.png
     program: Design
   - name: Jae Min Cha
     email: jc988@cornell.edu
-    picture: photos/Jae.jpg
+    picture: photos/Jae.png
     program: CS
   - name: Bobo Liu
     email: sl3284@cornell.edu
-    picture: photos/Bobo.jpg
+    picture: photos/Bobo.png
     program: CS
 assets:
 - title: Sprint 1
